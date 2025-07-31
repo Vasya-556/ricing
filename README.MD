@@ -13,6 +13,8 @@ sudo dnf install i3 kitty
 
 1.Go to ~/.config/kitty
 2.Paste everything from kitty folder there 
-3.More on [kitty documentation](https://sw.kovidgoyal.net/kitty/conf/)
+3.Download [font](https://www.nerdfonts.com/font-downloads)
+EnvyCode R Nerd Font Mono
+4.More on [kitty documentation](https://sw.kovidgoyal.net/kitty/conf/)
 
 # rofi
