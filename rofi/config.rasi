@@ -1,0 +1,60 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+  font: "EnvyCode R Nerd Font Mono 20";
+  modi: "drun,filebrowser,window";
+  show-icons: true;
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+  display-drun: "Drun";
+  drun-display-format: "{name}";
+}
+
+window { 
+  padding: 6;
+  background-color: var(background);
+  border-radius: 10px;
+}
+
+mainbox {
+  children: ["inputbar", "listview", "message"];
+  spacing: 2.5%;
+  padding: 0.5%;
+}
+
+prompt {
+  padding: 0.5%;
+  enabled: true;
+}
+
+entry {
+  padding: 0.5%;
+  placeholder: "Run";
+}
+
+inputbar {
+  children: ["prompt", "entry"];
+  border-color: var(foreground);
+  border: 1px;
+  border-radius: 10px;
+}
+
+listview {
+  columns: 2;
+}
+
+element {
+  padding: 0.5%;
+}
+
+element-icon {
+  padding: 0.5%;
+  size: 3.5%;
+}
+
+element-text {
+  padding: 0.5%;
+  expand: true;
+}

@@ -1,20 +1,26 @@
 # Installation
 
-sudo dnf install i3 kitty 
+1. Install 
+```bash
+sudo dnf install i3 kitty  
+```
+2. Clone repository
+```bash
+git clone https://github.com/dylanaraps/pywal
+```
+3. Go to pywal directory and run wal
+```bash
+cd pywal
+wal -i ~./config/wallpapers/ wallpaper name
+```
+4. Download [font](https://www.nerdfonts.com/font-downloads)
+5. Go to ~/.config/
+6. Paste folders: <b>i3, kitty, rofi, wallpapers</b> here
 
-# i3
+[Wallpapers from](https://www.wallpaperflare.com/)
 
-1.Go to ~/.config/i3
-2.Paste everything from i3 folder there 
-3.More on [i3 documentaion](https://i3wm.org/docs/userguide.html)
+# Documentations
 
-
-# kitty
-
-1.Go to ~/.config/kitty
-2.Paste everything from kitty folder there 
-3.Download [font](https://www.nerdfonts.com/font-downloads)
-EnvyCode R Nerd Font Mono
-4.More on [kitty documentation](https://sw.kovidgoyal.net/kitty/conf/)
-
-# rofi
+[i3](https://i3wm.org/docs/userguide.html)
+[kitty](https://sw.kovidgoyal.net/kitty/conf/)
+[rofi](https://davatorium.github.io/rofi/)
