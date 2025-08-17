@@ -218,3 +218,17 @@ bar {
 # Please remove the following exec line:
 #######################################################################
 exec i3-config-wizard
+
+
+bindsym Print exec flameshot gui
+
+
+# Gaps
+gaps inner 6px
+gaps outer 6px
+
+default_border pixel 3
+default_floating_border pixel 3
+
+Include pywal colors
+include ~/.config/generated/colors-i3.conf
