@@ -1,7 +1,8 @@
 @import "~/.cache/wal/colors-rofi-dark.rasi"
+@import "~/.config/generated/rofi-font.rasi"
 
 configuration {
-  font: "EnvyCode R Nerd Font Mono 20";
+  // font: "EnvyCode R Nerd Font Mono 20";
   modi: "drun,filebrowser,window";
   show-icons: true;
   filebrowser {
