@@ -21,6 +21,7 @@ wal -i ~./config/wallpapers/ wallpaper name
 
 # Documentations
 
-[i3](https://i3wm.org/docs/userguide.html)
-[kitty](https://sw.kovidgoyal.net/kitty/conf/)
-[rofi](https://davatorium.github.io/rofi/)
+- [i3](https://i3wm.org/docs/userguide.html)
+- [kitty](https://sw.kovidgoyal.net/kitty/conf/)
+- [rofi](https://davatorium.github.io/rofi/)
+- [polybar](https://github.com/polybar/polybar/wiki)

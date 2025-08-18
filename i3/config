@@ -203,9 +203,9 @@ bindsym Mod4+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+# bar {
+#         status_command i3status
+# }
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
@@ -226,9 +226,15 @@ bindsym Print exec flameshot gui
 # Gaps
 gaps inner 6px
 gaps outer 6px
+gaps bottom 42px
 
-default_border pixel 3
-default_floating_border pixel 3
+# Borders
+default_border pixel 1
+default_floating_border pixel 1
 
-Include pywal colors
-include ~/.config/generated/colors-i3.conf
+# Include pywal colors
+include ~/.config/generated/colors-i3-config.conf
+
+# Polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+

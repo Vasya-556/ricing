@@ -6,13 +6,17 @@ mkdir -p "$generated_dir"
 
 mapfile -t font_data < "$font_file"
 
-cat > "$generated_dir/kitty-font.conf" <<EOL
+cat > "$generated_dir/font-kitty-config.conf" <<EOL
 font_family     ${font_data[0]}
 font_size       ${font_data[1]}
 EOL
 
-cat > "$generated_dir/rofi-font.rasi" <<EOL
+cat > "$generated_dir/font-rofi-config.rasi" <<EOL
 configuration {
     font: "${font_data[0]} ${font_data[1]}";
 }
+EOL
+
+cat > "$generated_dir/font-polybar-config.ini" << EOL
+font-0 = "${font_data[0]}:size=10;2"
 EOL

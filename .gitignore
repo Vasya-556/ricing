@@ -18,3 +18,5 @@
 !rofi/**
 !scripts/
 !scripts/**
+!polybar/
+!polybar/**
