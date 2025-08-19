@@ -23,4 +23,5 @@ primary =           ${colors[4]}
 secondary =         ${colors[6]}
 alert =             ${colors[1]}
 disabled =          ${colors[8]}
+border =            ${colors[5]}
 EOL
