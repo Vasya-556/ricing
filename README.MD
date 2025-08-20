@@ -1,23 +1,29 @@
 # Installation
 
-1. Install 
+1. Installing
+- Install this packages 
 ```bash
-sudo dnf install i3 kitty  
+sudo dnf install i3 kitty polybar rofi
 ```
-2. Clone repository
+- Clone this repository
 ```bash
 git clone https://github.com/dylanaraps/pywal
 ```
-3. Go to pywal directory and run wal
-```bash
-cd pywal
-wal -i ~./config/wallpapers/ wallpaper name
-```
-4. Download [font](https://www.nerdfonts.com/font-downloads)
-5. Go to ~/.config/
-6. Paste folders: <b>i3, kitty, rofi, wallpapers</b> here
 
-[Wallpapers from](https://www.wallpaperflare.com/)
+2. Download media files
+- [font](https://www.nerdfonts.com/font-downloads)
+- [Wallpapers](https://www.wallpaperflare.com/)
+
+
+3. Set downloaded media
+- **Fonts:**
+Paste font name in first line in 
+~/.config/fonts/font.txt
+and font size as second line
+- **Wallpapers:** 
+Paste them to:
+font: ~/.Pictures
+
 
 # Documentations
 
