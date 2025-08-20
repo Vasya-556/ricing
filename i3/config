@@ -115,7 +115,7 @@ bindsym Mod4+w layout tabbed
 bindsym Mod4+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym Mod4+space focus mode_toggle
+# bindsym Mod4+space focus mode_toggle
 
 # focus the parent container
 bindsym Mod4+a focus parent
@@ -219,9 +219,8 @@ bindsym Mod4+r mode "resize"
 #######################################################################
 exec i3-config-wizard
 
-
+# Screenshot
 bindsym Print exec flameshot gui
-
 
 # Gaps
 gaps inner 6px
@@ -238,3 +237,5 @@ include ~/.config/generated/colors-i3-config.conf
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# Language layout
+exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_space_toggle"
