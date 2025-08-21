@@ -239,3 +239,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Language layout
 exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_space_toggle"
+
+# Show copyQ
+bindsym Mod4+x exec --no-startup-id copyq toggle
