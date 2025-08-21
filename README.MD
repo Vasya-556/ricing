@@ -38,6 +38,11 @@ set *settings.ini* in gtk-3.0 and gtk-4.0 to match icon theme
 gtk-icon-theme-name = Papirus
 ```
 
+4. Copy folders from ricing to your config
+- i3
+- kitty
+- polybar
+- rofi
 
 # Documentations
 

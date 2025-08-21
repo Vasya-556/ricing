@@ -25,3 +25,8 @@ alert =             ${colors[1]}
 disabled =          ${colors[8]}
 border =            ${colors[8]}
 EOL
+
+papirus_color_family=$(~/.config/scripts/find-color-family.py "${colors[6]}")
+
+rm -rf ~/.icons/Papirus ~/.icons/Papirus-Dark ~/.icons/Papirus-Light
+cp -r ~/.icons/papirus-icons-pack/papirus-icon-theme-"$papirus_color_family"-folders/* ~/.icons
