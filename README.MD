@@ -13,16 +13,30 @@ git clone https://github.com/dylanaraps/pywal
 2. Download media files
 - [font](https://www.nerdfonts.com/font-downloads)
 - [Wallpapers](https://www.wallpaperflare.com/)
-
+- [icon theme - papirus](https://www.gnome-look.org/p/1166289)
 
 3. Set downloaded media
 - **Fonts:**
 Paste font name in first line in 
+```bash
 ~/.config/fonts/font.txt
-and font size as second line
+```
+and font size as a second line
 - **Wallpapers:** 
 Paste them to:
-font: ~/.Pictures
+```bash
+~/.Pictures
+```
+- **icon theme**
+Extract folder and paste it into
+```bash
+~/.icons
+```
+set *settings.ini* in gtk-3.0 and gtk-4.0 to match icon theme
+```ini
+[Settings]
+gtk-icon-theme-name = Papirus
+```
 
 
 # Documentations
