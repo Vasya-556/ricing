@@ -20,3 +20,5 @@
 !scripts/**
 !polybar/
 !polybar/**
+!fastfetch/
+!fastfetch/**

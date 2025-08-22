@@ -3,7 +3,7 @@
 1. Installing
 - Install this packages 
 ```bash
-sudo dnf install i3 kitty polybar rofi
+sudo dnf install i3 kitty polybar rofi fastfetch
 ```
 - Clone this repository
 ```bash
@@ -43,6 +43,7 @@ gtk-icon-theme-name = Papirus
 - kitty
 - polybar
 - rofi
+- fastfetch
 
 # Documentations
 
@@ -50,3 +51,4 @@ gtk-icon-theme-name = Papirus
 - [kitty](https://sw.kovidgoyal.net/kitty/conf/)
 - [rofi](https://davatorium.github.io/rofi/)
 - [polybar](https://github.com/polybar/polybar/wiki)
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
