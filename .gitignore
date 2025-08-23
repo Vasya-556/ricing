@@ -22,3 +22,5 @@
 !polybar/**
 !fastfetch/
 !fastfetch/**
+!eww/
+!eww/**

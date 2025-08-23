@@ -9,6 +9,8 @@ sudo dnf install i3 kitty polybar rofi fastfetch
 ```bash
 git clone https://github.com/dylanaraps/pywal
 ```
+- Install Eww
+[follow this](https://elkowar.github.io/eww/)
 
 2. Download media files
 - [font](https://www.nerdfonts.com/font-downloads)
@@ -44,6 +46,7 @@ gtk-icon-theme-name = Papirus
 - polybar
 - rofi
 - fastfetch
+- eww
 
 # Documentations
 

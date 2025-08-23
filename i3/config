@@ -242,3 +242,6 @@ exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_sp
 
 # Show copyQ
 bindsym Mod4+x exec --no-startup-id copyq toggle
+
+# Show telegram
+bindsym Mod4+t exec telegram-desktop
