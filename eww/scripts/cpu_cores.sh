@@ -34,12 +34,11 @@ get_cpu_usage() {
             diff_idle=$((idle - prev_idle[idx]))
             diff_total=$((total - prev_total[idx]))
             usage=$(( (100 * (diff_total - diff_idle)) / diff_total ))
-
-            # echo "CPU$((idx + 1)): $usage%"
+            cpu_string="\"CPU $((idx+1)) = $usage\""
             if [[ -z "$usage_array" ]]; then
-                usage_array="$usage"
+                usage_array="$cpu_string"
             else
-                usage_array="$usage_array,$usage"
+                usage_array="$usage_array,$cpu_string"
             fi
 
             ((idx++))

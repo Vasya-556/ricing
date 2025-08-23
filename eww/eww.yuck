@@ -1,5 +1,4 @@
 (defvar cpu_array "[0,0,0,0,0,0,0,0,0,0,0,0]")
-(defvar cpu_core_count 1)
 
 (defwindow task2
     :monitor 0
@@ -17,9 +16,6 @@
             :halign "center"
             (for i in cpu_array
                 (box 
-                    (label :text "CPU")
-                    (label :text cpu_core_count)
-                    (label :text "=")
                     (label :text i)
                     (label :text "%"))
             )
