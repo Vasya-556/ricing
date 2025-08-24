@@ -34,7 +34,7 @@ get_cpu_usage() {
             diff_idle=$((idle - prev_idle[idx]))
             diff_total=$((total - prev_total[idx]))
             usage=$(( (100 * (diff_total - diff_idle)) / diff_total ))
-            cpu_string="\"CPU $((idx+1)) = $usage\""
+            cpu_string="\"CPU $((idx+1)) = $usage%\""
             if [[ -z "$usage_array" ]]; then
                 usage_array="$cpu_string"
             else
@@ -46,7 +46,7 @@ get_cpu_usage() {
     done < /proc/stat
 
     eww update cpu_array="[$usage_array]"
-    echo "[${usage_array[*]}]"
+    # echo "[${usage_array[*]}]"
 }
 
 get_cpu_usage 1

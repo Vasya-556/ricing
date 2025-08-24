@@ -1,6 +1,7 @@
 (defvar cpu_array "[0,0,0,0,0,0,0,0,0,0,0,0]")
+(defvar wifi_list "[]")
 
-(defwindow task2
+(defwindow cpu_cores_load
     :monitor 0
     :geometry (geometry 
         :x 100
@@ -16,8 +17,40 @@
             :halign "center"
             (for i in cpu_array
                 (box 
-                    (label :text i)
-                    (label :text "%"))
+                    (label :text i))
+            )
+        )
+    )
+)
+
+(defwindow wifi_data
+    :monitor 0
+    :geometry (geometry
+        :x 100
+        :y 300
+        :width "300px"
+        :height "300px"
+    )
+    (box 
+        :orientation "horizontal"
+        :halign "center"
+        :valign "center"
+        (box
+            :orientation "vertical"
+            :halign "center"
+            (for i in wifi_list
+                (box 
+                    (label :text i))
+            )
+            (box 
+                :orientation "horizontal"
+                :halign "center"
+                :geometry (geometry
+                    :width "50px"
+                    :height "50px"
+                )
+                (button 
+                    :onclick "/home/vasyl/.config/eww/scripts/start_network_manager.sh" "open network" )
             )
         )
     )
