@@ -43,12 +43,14 @@
                     (label :text i))
             )
             (box 
-                :orientation "horizontal"
+                :orientation "vertical"
                 :halign "center"
                 :geometry (geometry
                     :width "50px"
                     :height "50px"
                 )
+                (button 
+                    :onclick "bash -c '/home/vasyl/.config/eww/scripts/get_wifi_data.sh' &" "Reload" )
                 (button 
                     :onclick "/home/vasyl/.config/eww/scripts/start_network_manager.sh" "open network" )
             )
