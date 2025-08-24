@@ -21,3 +21,15 @@ EOL
 cat > "$generated_dir/font-polybar-config.ini" << EOL
 font-0 = "${font_data[0]}:size=${polybar_font_size};2"
 EOL
+
+cat > "$HOME/.config/gtk-3.0/gtk.css" << EOL
+* {
+    font-family: "${font_data[0]}";
+}
+EOL
+
+cat > "$HOME/.config/gtk-4.0/gtk.css" << EOL
+* {
+    font-family: "${font_data[0]}";
+}
+EOL
