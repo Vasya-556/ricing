@@ -1,5 +1,8 @@
 (defvar cpu_array "[0,0,0,0,0,0,0,0,0,0,0,0]")
 (defvar wifi_list "[]")
+(defvar time "25:00")
+(defvar pomodoro_label "") ; work/relax
+; (defpoll work_time :interval "1s" "cat /home/vasyl/.config/eww/tmp.txt")
 
 (defwindow cpu_cores_load
     :monitor 0
@@ -55,5 +58,35 @@
                     :onclick "/home/vasyl/.config/eww/scripts/start_network_manager.sh" "open network" )
             )
         )
+    )
+)
+
+(defwindow pomodoro
+    :monitor 0
+    :geometry (geometry 
+        :anchor "center"
+        :x 100
+        :y 100
+        :width "300px"
+        :height "400px"
+    )
+        :windowtype "dialog"
+        :wm-ignore false
+        :stacking "fg"
+        :focusable true
+    (box
+        :orientation "vertical"
+        :halign "center"
+        :valign "center"
+        (label :text pomodoro_label)
+        (label :text time)
+        ; (label :text work_time)
+        (input :onaccept "/home/vasyl/.config/eww/scripts/write_data_in_file.sh '{}' scripts/work_time.txt")
+        (label :text "Enter relax time (default 5:00)")
+        (input :onaccept "notify-send '{}'")
+        (label :text "Enter number of loops (default 3)")
+        (input :onaccept "notify-send '{}'")
+        (button :onclick "bash -c /home/vasyl/.config/eww/scripts/start_pomodoro.sh &" "Start")
+        (button :onclick "bash -c /home/vasyl/.config/eww/scripts/stop_pomodoro.sh &" "Stop")
     )
 )
