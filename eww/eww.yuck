@@ -1,8 +1,7 @@
 (defvar cpu_array "[0,0,0,0,0,0,0,0,0,0,0,0]")
 (defvar wifi_list "[]")
 (defvar time "25:00")
-(defvar pomodoro_label "") ; work/relax
-; (defpoll work_time :interval "1s" "cat /home/vasyl/.config/eww/tmp.txt")
+(defvar pomodoro_label "Menu") ; work/relax
 
 (defwindow cpu_cores_load
     :monitor 0
@@ -68,7 +67,7 @@
         :x 100
         :y 100
         :width "300px"
-        :height "400px"
+        :height "550px"
     )
         :windowtype "dialog"
         :wm-ignore false
@@ -80,13 +79,18 @@
         :valign "center"
         (label :text pomodoro_label)
         (label :text time)
-        ; (label :text work_time)
-        (input :onaccept "/home/vasyl/.config/eww/scripts/write_data_in_file.sh '{}' scripts/work_time.txt")
+        (label :text "Enter work time (default 25:00)")
+        (input :onaccept "/home/vasyl/.config/eww/scripts/write_data_in_file.sh '{}' /home/vasyl/.config/eww/configs/work_time.txt")
         (label :text "Enter relax time (default 5:00)")
-        (input :onaccept "notify-send '{}'")
+        (input :onaccept "/home/vasyl/.config/eww/scripts/write_data_in_file.sh '{}' /home/vasyl/.config/eww/configs/relax_time.txt")
         (label :text "Enter number of loops (default 3)")
-        (input :onaccept "notify-send '{}'")
+        (input :onaccept "/home/vasyl/.config/eww/scripts/write_data_in_file.sh '{}' /home/vasyl/.config/eww/configs/loop.txt")
         (button :onclick "bash -c /home/vasyl/.config/eww/scripts/start_pomodoro.sh &" "Start")
-        (button :onclick "bash -c /home/vasyl/.config/eww/scripts/stop_pomodoro.sh &" "Stop")
+        (button :onclick "kill -CONT $(pgrep -f pomodoro_timer.py)" "Resume")
+        (button :onclick "kill -STOP $(pgrep -f pomodoro_timer.py)" "Pause")
+        (button :onclick "bash -c /home/vasyl/.config/eww/scripts/end_pomodoro.sh &" "End")
+        (button :onclick "bash -c /home/vasyl/.config/eww/scripts/reset_to_default_values.sh" "Reset to default values")
+        (button :onclick "bash -c /home/vasyl/.config/eww/scripts/restart_current_session.sh" "Restart current session")
+        (button :onclick "eww close pomodoro & kill $(pgrep -f pomodoro_timer.py)" "Quit")
     )
 )
