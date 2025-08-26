@@ -235,13 +235,22 @@ default_floating_border pixel 1
 include ~/.config/generated/colors-i3-config.conf
 
 # Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Language layout
-exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_space_toggle"
+exec_always --no-startup-id setxkbmap -layout us,ua -option grp:win_space_toggle
+# exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_space_toggle"
 
 # Show copyQ
 bindsym Mod4+x exec --no-startup-id copyq toggle
 
 # Show telegram
 bindsym Mod4+t exec telegram-desktop
+
+# Touchpad settings
+exec_always --no-startup-id xinput set-prop 19 "libinput Tapping Enabled" 1
+exec_always --no-startup-id xinput set-prop 19 "libinput Natural Scrolling Enabled" 1
+
+# Set wallpapers and colors
+exec_always wal -i ~/.config/wallpapers/w1.jpg
+exec_always ~/.config/scripts/update-colors.sh
