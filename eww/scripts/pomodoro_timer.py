@@ -76,7 +76,7 @@ def play_random_song():
         n = random.randrange(0, l)
         try:
             PROCESS = subprocess.Popen(
-                ["ffplay", "-nodisp", "-autoexit", "-loglevel", "quiet", {all_files[n]}],
+                ["ffplay", "-nodisp", "-autoexit", "-loglevel", "quiet", all_files[n]],
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
             )
             PROCESS.wait()
