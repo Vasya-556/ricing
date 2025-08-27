@@ -251,6 +251,5 @@ bindsym Mod4+t exec telegram-desktop
 exec_always --no-startup-id xinput set-prop 19 "libinput Tapping Enabled" 1
 exec_always --no-startup-id xinput set-prop 19 "libinput Natural Scrolling Enabled" 1
 
-# Set wallpapers and colors
-exec_always wal -i ~/.config/wallpapers/w1.jpg
-exec_always ~/.config/scripts/update-colors.sh
+# exec --no-startup-id dunst
+bindsym Mod4+b exec pkill dunst && dunst &

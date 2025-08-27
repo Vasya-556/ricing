@@ -25,3 +25,6 @@
 !eww/
 !eww/**
 eww/music/
+!dunst/
+!dunst/**
+dunst/dunstrc.d/

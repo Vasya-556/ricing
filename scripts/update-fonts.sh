@@ -6,6 +6,7 @@ mkdir -p "$generated_dir"
 
 mapfile -t font_data < "$font_file"
 polybar_font_size=$(( font_data[1] - 2 ))
+dunst_font_size=$(( font_data[1] - 4))
 
 cat > "$generated_dir/font-kitty-config.conf" <<EOL
 font_family     ${font_data[0]}
@@ -33,3 +34,11 @@ cat > "$HOME/.config/gtk-4.0/gtk.css" << EOL
     font-family: "${font_data[0]}";
 }
 EOL
+
+cat > "$generated_dir/font-dunst.conf" <<EOL
+[global]
+    font = ${font_data[0]} ${dunst_font_size}
+EOL
+
+mkdir -p ~/.config/dunst/dunstrc.d
+cp "$generated_dir/font-dunst.conf" ~/.config/dunst/dunstrc.d/font.conf

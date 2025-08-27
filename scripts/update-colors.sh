@@ -30,3 +30,27 @@ papirus_color_family=$(~/.config/scripts/find-color-family.py "${colors[6]}")
 
 rm -rf ~/.icons/Papirus ~/.icons/Papirus-Dark ~/.icons/Papirus-Light
 cp -r ~/.icons/papirus-icons-pack/papirus-icon-theme-"$papirus_color_family"-folders/* ~/.icons
+
+cat > "$generated_dir/colors-dunst.conf" <<EOL
+[global]
+    frame_color = "${colors[8]}"
+
+[urgency_low]
+    background = "${colors[6]}"
+    foreground = "${colors[7]}"
+    timeout = 10
+
+[urgency_normal]
+    background = "${colors[6]}"
+    foreground = "${colors[7]}"
+    timeout = 10
+
+[urgency_critical]
+    background = "${colors[1]}"
+    foreground = "${colors[7]}"
+    frame_color = "${colors[8]}"
+    timeout = 0
+EOL
+
+mkdir -p ~/.config/dunst/dunstrc.d
+cp "$generated_dir/colors-dunst.conf" ~/.config/dunst/dunstrc.d/colors.conf
