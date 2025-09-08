@@ -2,7 +2,7 @@
 @import "~/.config/generated/font-rofi-config.rasi"
 
 configuration {
-  modi: "drun,filebrowser,window";
+  modi: "drun,run,filebrowser,window";
   show-icons: true;
   filebrowser {
       directories-first: true;

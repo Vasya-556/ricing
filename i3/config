@@ -238,7 +238,7 @@ include ~/.config/generated/colors-i3-config.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Language layout
-exec_always --no-startup-id setxkbmap -layout us,ua -option grp:win_space_toggle
+exec_always --no-startup-id3 setxkbmap -layout us,ua -option grp:win_space_toggle
 # exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_space_toggle"
 
 # Show copyQ
@@ -251,5 +251,11 @@ bindsym Mod4+t exec telegram-desktop
 exec_always --no-startup-id xinput set-prop 19 "libinput Tapping Enabled" 1
 exec_always --no-startup-id xinput set-prop 19 "libinput Natural Scrolling Enabled" 1
 
-# exec --no-startup-id dunst
-bindsym Mod4+b exec pkill dunst && dunst &
+# Restart dunst
+bindsym Mod4+b exec pkill dunst && dunst && /home/vasyl/pet/Theory/dunst-logger/end.sh
+
+# Start notifications server 
+# exec_always --no-startup-id /home/vasyl/pet/Theory/dunst-logger/start.sh
+
+# Reset mouse button
+exec --no-startup-id ~/.config/scripts/mouse_remap.sh

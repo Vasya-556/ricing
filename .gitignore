@@ -22,8 +22,6 @@
 !polybar/**
 !fastfetch/
 !fastfetch/**
-!eww/
-!eww/**
 eww/music/
 !dunst/
 !dunst/**

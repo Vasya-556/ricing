@@ -3,14 +3,12 @@
 1. Installing
 - Install this packages 
 ```bash
-sudo dnf install i3 kitty polybar rofi fastfetch
+sudo dnf install i3 kitty polybar rofi fastfetch dunst
 ```
 - Clone this repository
 ```bash
 git clone https://github.com/dylanaraps/pywal
 ```
-- Install Eww
-[follow this](https://elkowar.github.io/eww/)
 
 2. Download media files
 - [font](https://www.nerdfonts.com/font-downloads)
@@ -46,7 +44,7 @@ gtk-icon-theme-name = Papirus
 - polybar
 - rofi
 - fastfetch
-- eww
+- dunst
 
 # Documentations
 
@@ -55,3 +53,4 @@ gtk-icon-theme-name = Papirus
 - [rofi](https://davatorium.github.io/rofi/)
 - [polybar](https://github.com/polybar/polybar/wiki)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- [dunst](https://dunst-project.org/documentation/)
