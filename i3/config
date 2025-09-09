@@ -259,3 +259,6 @@ bindsym Mod4+b exec pkill dunst && dunst && /home/vasyl/pet/Theory/dunst-logger/
 
 # Reset mouse button
 exec --no-startup-id ~/.config/scripts/mouse_remap.sh
+
+# Start picom
+exec_always --no-startup-id picom
