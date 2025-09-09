@@ -228,7 +228,7 @@ gaps outer 6px
 gaps bottom 42px
 
 # Borders
-default_border pixel 1
+default_border pixel 4
 default_floating_border pixel 1
 
 # Include pywal colors
