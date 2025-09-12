@@ -3,7 +3,7 @@
 1. Installing
 - Install this packages 
 ```bash
-sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava mpv
+sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava mpv vokoscreenNG
 ```
 - Clone this repository
 ```bash
@@ -40,6 +40,11 @@ gtk-icon-theme-name = Papirus
 ```
 
 4. Copy all folders from ricing to ~/.config
+
+5. Run this
+```bash
+ln -s ~/.config/scripts/main.sh ~/.local/bin/wp
+```
 
 # Documentations
 

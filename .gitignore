@@ -32,5 +32,6 @@ dunst/dunstrc.d/
 !mpd/**
 !rmpc/
 !rmpc/**
+rmpc/themes
 !cava/
 !cava/**
