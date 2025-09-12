@@ -28,3 +28,9 @@ eww/music/
 dunst/dunstrc.d/
 !picom/
 !picom/**
+!mpd/
+!mpd/**
+!rmpc/
+!rmpc/**
+!cava/
+!cava/**

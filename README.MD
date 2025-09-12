@@ -3,12 +3,13 @@
 1. Installing
 - Install this packages 
 ```bash
-sudo dnf install i3 kitty polybar rofi fastfetch dunst
+sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava
 ```
 - Clone this repository
 ```bash
 git clone https://github.com/dylanaraps/pywal
 ```
+- [Install rmpc](https://mierak.github.io/rmpc/)
 
 2. Download media files
 - [font](https://www.nerdfonts.com/font-downloads)
@@ -45,6 +46,9 @@ gtk-icon-theme-name = Papirus
 - rofi
 - fastfetch
 - dunst
+- mpd
+- rmpc
+- cava
 
 # Documentations
 
@@ -54,3 +58,6 @@ gtk-icon-theme-name = Papirus
 - [polybar](https://github.com/polybar/polybar/wiki)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - [dunst](https://dunst-project.org/documentation/)
+- [mpd](https://mpd.readthedocs.io/en/latest/)
+- [rmpc](https://mierak.github.io/rmpc/)
+- [cava](https://github.com/karlstav/cava)

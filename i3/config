@@ -238,7 +238,7 @@ include ~/.config/generated/colors-i3-config.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Language layout
-exec_always --no-startup-id3 setxkbmap -layout us,ua -option grp:win_space_toggle
+exec_always --no-startup-id setxkbmap -layout us,ua -option grp:win_space_toggle
 # exec_always "setxkbmap -model pc104 -layout us,ua -variant ,, -option grp:win_space_toggle"
 
 # Show copyQ

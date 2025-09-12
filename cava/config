@@ -1,0 +1,107 @@
+[general]
+
+framerate = 60
+autosens = 1
+
+bars = 0
+bar_width = 4
+bar_spacing = 1
+
+# bar_height is only used for output in "noritake" format
+; bar_height = 32
+
+# For SDL width and space between bars is in pixels, defaults are:
+; bar_width = 20
+; bar_spacing = 5
+
+# sdl_glsl have these default values, they are only used to calulate max number of bars.
+; bar_width = 1
+; bar_spacing = 0
+
+lower_cutoff_freq = 20
+higher_cutoff_freq = 20000
+
+[input]
+
+method = pulse
+source = auto
+
+; method = pipewire
+; source = auto
+
+; method = alsa
+; source = hw:Loopback,1
+
+; method = fifo
+; source = /tmp/mpd.fifo
+
+; method = shmem
+; source = /squeezelite-AA:BB:CC:DD:EE:FF
+
+; method = portaudio
+; source = auto
+
+; method = sndio
+; source = default
+
+; method = oss
+; source = /dev/dsp
+
+; method = jack
+; source = default
+
+# The options 'sample_rate', 'sample_bits', 'channels' and 'autoconnect' can be configured for some input methods:
+#   sample_rate: fifo, pipewire, sndio, oss
+#   sample_bits: fifo, pipewire, sndio, oss
+#   channels:    sndio, oss, jack
+#   autoconnect: jack
+# Other methods ignore these settings.
+#
+# For 'sndio' and 'oss' they are only preferred values, i.e. if the values are not supported
+# by the chosen audio device, the device will use other supported values instead.
+# Example: 48000, 32 and 2, but the device only supports 44100, 16 and 1, then it
+# will use 44100, 16 and 1.
+#
+; sample_rate = 44100
+; sample_bits = 16
+; channels = 2
+; autoconnect = 2
+
+
+[output]
+
+method = noncurses
+orientation = bottom
+
+channels = mono
+mono_option = average
+reverse = 0
+
+xaxis = none
+alacritty_sync = 0
+
+show_idle_bar_heads = 1
+
+[color]
+
+gradient = 1
+gradient_count = 5
+
+gradient_color_1 = '#7B1FA2'
+gradient_color_2 = '#127bbc'
+gradient_color_3 = '#26c972'
+gradient_color_4 = '#e8e845'
+gradient_color_5 = '#d4251b'
+
+[smoothing]
+
+monstercat = 1
+noise_reduction = 50
+
+[eq]
+
+1 = 1
+2 = 1
+3 = 1
+4 = 1
+5 = 1
