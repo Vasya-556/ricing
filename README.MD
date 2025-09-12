@@ -3,7 +3,7 @@
 1. Installing
 - Install this packages 
 ```bash
-sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava
+sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava mpv
 ```
 - Clone this repository
 ```bash
@@ -39,16 +39,7 @@ set *settings.ini* in gtk-3.0 and gtk-4.0 to match icon theme
 gtk-icon-theme-name = Papirus
 ```
 
-4. Copy folders from ricing to your config
-- i3
-- kitty
-- polybar
-- rofi
-- fastfetch
-- dunst
-- mpd
-- rmpc
-- cava
+4. Copy all folders from ricing to ~/.config
 
 # Documentations
 
@@ -61,3 +52,4 @@ gtk-icon-theme-name = Papirus
 - [mpd](https://mpd.readthedocs.io/en/latest/)
 - [rmpc](https://mierak.github.io/rmpc/)
 - [cava](https://github.com/karlstav/cava)
+- [mpv](https://mpv.io/)
