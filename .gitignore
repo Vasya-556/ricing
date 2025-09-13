@@ -35,3 +35,5 @@ dunst/dunstrc.d/
 rmpc/themes
 !cava/
 !cava/**
+!betterlockscreen/
+!betterlockscreen/**

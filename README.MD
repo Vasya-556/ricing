@@ -1,4 +1,4 @@
-# Installation
+# Configuration
 
 1. Installing
 - Install this packages 
@@ -10,6 +10,7 @@ sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava mpv vokoscreenNG
 git clone https://github.com/dylanaraps/pywal
 ```
 - [Install rmpc](https://mierak.github.io/rmpc/)
+- [Install betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
 
 2. Download media files
 - [font](https://www.nerdfonts.com/font-downloads)
@@ -46,6 +47,12 @@ gtk-icon-theme-name = Papirus
 ln -s ~/.config/scripts/main.sh ~/.local/bin/wp
 ```
 
+6. Set betterlockscreen
+```bash
+cd ~/.config/betterlockscreen
+betterlockscreen -u 1.jpg
+```
+
 # Documentations
 
 - [i3](https://i3wm.org/docs/userguide.html)
@@ -58,3 +65,4 @@ ln -s ~/.config/scripts/main.sh ~/.local/bin/wp
 - [rmpc](https://mierak.github.io/rmpc/)
 - [cava](https://github.com/karlstav/cava)
 - [mpv](https://mpv.io/)
+- [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
