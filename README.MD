@@ -5,30 +5,35 @@
 ```bash
 sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava mpv vokoscreenNG
 ```
-- Clone this repository
-```bash
-git clone https://github.com/dylanaraps/pywal
-```
-- [Install rmpc](https://mierak.github.io/rmpc/)
-- [Install betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
 
-2. Download media files
+2. Install this repositories
+- [install pywal](https://github.com/dylanaraps/pywal)
+- [Install betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
+*Optional*
+- [install pastel](https://github.com/sharkdp/pastel)
+- [install durdraw](https://github.com/cmang/durdraw/)
+- [Install rmpc](https://mierak.github.io/rmpc/)
+
+
+3. Download media files
 - [font](https://www.nerdfonts.com/font-downloads)
 - [Wallpapers](https://www.wallpaperflare.com/)
 - [icon theme - papirus](https://www.gnome-look.org/p/1166289)
 
-3. Set downloaded media
+4. Set downloaded media
 - **Fonts:**
 Paste font name in first line in 
 ```bash
 ~/.config/fonts/font.txt
 ```
 and font size as a second line
+
 - **Wallpapers:** 
 Paste them to:
 ```bash
 ~/.Pictures
 ```
+
 - **icon theme**
 Extract folder and paste it into
 ```bash
@@ -40,17 +45,22 @@ set *settings.ini* in gtk-3.0 and gtk-4.0 to match icon theme
 gtk-icon-theme-name = Papirus
 ```
 
-4. Copy all folders from ricing to ~/.config
+5. Copy all folders from ricing to ~/.config
 
-5. Run this
+6. Run this
 ```bash
 ln -s ~/.config/scripts/main.sh ~/.local/bin/wp
 ```
 
-6. Set betterlockscreen
+7. Set betterlockscreen
 ```bash
 cd ~/.config/betterlockscreen
 betterlockscreen -u 1.jpg
+```
+
+8. Change wallpapers
+```bash
+wp path/image
 ```
 
 # Documentations
@@ -66,3 +76,5 @@ betterlockscreen -u 1.jpg
 - [cava](https://github.com/karlstav/cava)
 - [mpv](https://mpv.io/)
 - [betterlockscreen](https://github.com/betterlockscreen/betterlockscreen)
+- [durdraw](https://github.com/cmang/durdraw/)
+- [pastel](https://github.com/sharkdp/pastel)
