@@ -17,7 +17,6 @@ sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava mpv vokoscreenNG
 
 3. Download media files
 - [font](https://www.nerdfonts.com/font-downloads)
-- [Wallpapers](https://www.wallpaperflare.com/)
 - [icon theme - papirus](https://www.gnome-look.org/p/1166289)
 
 4. Set downloaded media
@@ -27,12 +26,6 @@ Paste font name in first line in
 ~/.config/fonts/font.txt
 ```
 and font size as a second line
-
-- **Wallpapers:** 
-Paste them to:
-```bash
-~/.Pictures
-```
 
 - **icon theme**
 Extract folder and paste it into
@@ -45,20 +38,20 @@ set *settings.ini* in gtk-3.0 and gtk-4.0 to match icon theme
 gtk-icon-theme-name = Papirus
 ```
 
-5. Copy all folders from ricing to ~/.config
+1. Copy all folders from ricing to ~/.config
 
-6. Run this
+2. Run this
 ```bash
 ln -s ~/.config/scripts/main.sh ~/.local/bin/wp
 ```
 
-7. Set betterlockscreen
+1. Set betterlockscreen
 ```bash
 cd ~/.config/betterlockscreen
 betterlockscreen -u 1.jpg
 ```
 
-8. Change wallpapers
+1. Change wallpapers
 ```bash
 wp path/image
 ```
