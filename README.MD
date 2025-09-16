@@ -53,7 +53,7 @@ betterlockscreen -u 1.jpg
 
 1. Change wallpapers
 ```bash
-wp path/image
+wp path
 ```
 
 # Documentations

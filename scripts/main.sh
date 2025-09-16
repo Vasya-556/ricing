@@ -28,6 +28,17 @@ if [[ -z "$wallpaper_file" ]]; then
     exit 1
 fi
 
+if [[ -d "$wallpaper_file" ]]; then
+    mapfile -t images < <(find "$wallpaper_file" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \))
+    
+    if [[ ${#images[@]} -eq 0 ]]; then
+        echo "No image files found in directory: $wallpaper_file"
+        exit 1
+    fi
+
+    wallpaper_file="${images[RANDOM % ${#images[@]}]}"
+fi
+
 wal -i "$wallpaper_file"
 
 if $change_fonts; then
