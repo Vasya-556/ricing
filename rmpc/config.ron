@@ -37,6 +37,7 @@
             "1":       SwitchToTab("Main"),
             "2":       SwitchToTab("Search"),
             "3":       SwitchToTab("Dir"),
+            "4":       SwitchToTab("Playlists"),
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
@@ -131,6 +132,10 @@
         (
             name: "Dir",
             pane: Pane(Directories),
+        ),
+        (
+            name: "Playlists",
+            pane: Pane(Playlists),
         ),
     ],
 )

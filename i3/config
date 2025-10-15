@@ -246,7 +246,7 @@ exec_always --no-startup-id setxkbmap -layout us,ua -option grp:win_space_toggle
 bindsym Mod4+x exec --no-startup-id copyq toggle
 
 # Show telegram
-bindsym Mod4+t exec telegram-desktop
+bindsym Mod4+t exec Telegram
 
 # Touchpad settings
 exec_always --no-startup-id xinput set-prop 19 "libinput Tapping Enabled" 1
