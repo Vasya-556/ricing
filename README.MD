@@ -3,7 +3,7 @@
 1. Installing
 - Install this packages 
 ```bash
-sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava mpv vokoscreenNG
+sudo dnf install i3 kitty polybar rofi fastfetch dunst mpd cava mpv vokoscreenNG nmtui
 ```
 
 2. Install this repositories
