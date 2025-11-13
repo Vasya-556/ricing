@@ -266,3 +266,6 @@ exec_always --no-startup-id picom
 
 # Lock screen
 bindsym Mod4+Shift+x exec betterlockscreen -l
+
+# Fix Touchpad
+exec_always --no-startup-id ~/.config/scripts/fix-touchpad.sh
