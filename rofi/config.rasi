@@ -8,7 +8,7 @@ configuration {
       directories-first: true;
       sorting-method:    "name";
   }
-  display-drun: "Drun";
+  display-drun: "Start";
   drun-display-format: "{name}";
 }
 
