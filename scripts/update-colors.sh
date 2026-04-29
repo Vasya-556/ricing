@@ -229,5 +229,33 @@ cat > "$generated_dir/pywal.ron" <<EOL
 )
 EOL
 
-mkdir -p ~/.config/rmpc/themes
-cp "$generated_dir/pywal.ron" ~/.config/rmpc/themes/pywal.ron
+cat > "$generated_dir/display-sys-info.sh" <<EOL
+#!/bin/bash
+
+if [ -f /tmp/polybar_toggle ]; then
+
+wifi=\$(timeout 0.2 nmcli -t -f ACTIVE,SIGNAL dev wifi 2>/dev/null | grep '^yes' | cut -d: -f2)
+wifi=\${wifi:-0}
+
+cpu=\$(awk '{u=(\$2+\$4)*100/(\$2+\$4+\$5)} END {printf "%2.0f", u}' /proc/stat)
+
+temp=\$(( \$(cat /sys/class/thermal/thermal_zone0/temp 2>/dev/null || echo 0) / 1000 ))
+
+gpu=0
+gtemp=0
+if command -v nvidia-smi >/dev/null 2>&1; then
+  gpu=\$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits 2>/dev/null)
+  gtemp=\$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits 2>/dev/null)
+fi
+
+mem=\$(free -m | awk '/Mem:/ {printf "%d%%", \$3/\$2*100}')
+disk=\$(df -h / | awk 'NR==2 {print \$3 " / " \$2}')
+bat="N/A"
+[ -f /sys/class/power_supply/BAT0/capacity ] && bat=\$(cat /sys/class/power_supply/BAT0/capacity)
+
+echo "%{F${colors[4]}}WiFi%{F-} \$wifi% | %{F${colors[4]}}CPU%{F-} \$cpu% \${temp}°C | %{F${colors[4]}}GPU%{F-} \$gpu% \${gtemp}°C | %{F${colors[4]}}RAM%{F-} \$mem | %{F${colors[4]}}/%{F-} \$disk | %{F${colors[4]}}BAT%{F-} \$bat%"
+
+else
+  echo ""
+fi
+EOL
